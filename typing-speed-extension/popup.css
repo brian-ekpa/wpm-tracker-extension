@@ -1,0 +1,273 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f5f7fb;
+  color: #17233b;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 360px;
+  min-height: 500px;
+  margin: 0;
+  background: #f5f7fb;
+}
+
+.panel {
+  padding: 22px 20px 16px;
+}
+
+.topbar,
+.brand,
+.live-status,
+.speed-heading,
+.speed-value,
+.session-row,
+.footer {
+  display: flex;
+  align-items: center;
+}
+
+.topbar,
+.speed-heading,
+.session-row,
+.footer {
+  justify-content: space-between;
+}
+
+.brand {
+  gap: 11px;
+}
+
+.brand-mark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 13px;
+  background: #e5edff;
+  color: #3569e8;
+}
+
+.brand-mark svg {
+  width: 23px;
+  height: 23px;
+}
+
+.eyebrow {
+  margin: 0 0 2px;
+  color: #77839a;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+h1 {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.live-status {
+  gap: 6px;
+  color: #718099;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.status-dot,
+.live-tag span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #9ca8ba;
+}
+
+.live-status.is-active .status-dot {
+  background: #23bb83;
+  box-shadow: 0 0 0 3px #dff7ee;
+}
+
+.speed-card {
+  margin-top: 22px;
+  padding: 17px 18px 15px;
+  border-radius: 16px;
+  background: #142647;
+  color: #fff;
+  box-shadow: 0 8px 20px #13294a1a;
+}
+
+.speed-heading {
+  color: #c2cce0;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.live-tag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 7px;
+  border: 1px solid #52627d;
+  border-radius: 20px;
+  color: #dbe5f5;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.live-tag span {
+  background: #56d5a5;
+}
+
+.speed-value {
+  align-items: baseline;
+  gap: 9px;
+  margin-top: 5px;
+}
+
+.speed-value strong {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -3.5px;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.speed-value > span {
+  color: #aebbd1;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.meter {
+  height: 6px;
+  overflow: hidden;
+  margin-top: 14px;
+  border-radius: 20px;
+  background: #334461;
+}
+
+.meter-fill {
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #64d5b1, #6ba6ff);
+  transition: width 260ms ease;
+}
+
+.meter-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  color: #9eacc4;
+  font-size: 9px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 13px;
+}
+
+.stat-card {
+  min-height: 68px;
+  padding: 11px 12px;
+  border: 1px solid #e6eaf1;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.stat-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #7c899e;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.stat-card strong {
+  color: #1e2e4a;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-card small {
+  margin-left: 4px;
+  color: #8a97aa;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.session-row {
+  padding: 13px 2px 11px;
+  color: #77839a;
+  font-size: 11px;
+}
+
+.session-row strong {
+  color: #31415c;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.notice {
+  min-height: 36px;
+  margin: 0;
+  padding: 10px 11px;
+  border-radius: 9px;
+  background: #eaf0fb;
+  color: #526684;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.notice.is-error {
+  background: #fff0ec;
+  color: #a34c36;
+}
+
+.footer {
+  gap: 8px;
+  margin-top: 14px;
+  color: #8792a4;
+  font-size: 9px;
+}
+
+.footer button {
+  flex: 0 0 auto;
+  padding: 6px 9px;
+  border: 1px solid #dce2eb;
+  border-radius: 7px;
+  background: #fff;
+  color: #53617a;
+  cursor: pointer;
+  font: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  transition: border-color 140ms ease, background 140ms ease, color 140ms ease;
+}
+
+.footer button:hover {
+  border-color: #aabbe0;
+  background: #f7f9ff;
+  color: #315dc7;
+}
+
+.footer button:focus-visible {
+  outline: 2px solid #5d86ed;
+  outline-offset: 2px;
+}

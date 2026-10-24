@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Typing Speed Tracker</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M4 7.5h16M4 12h16M4 16.5h10" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <circle cx="18" cy="16.5" r="2" fill="currentColor" />
+            </svg>
+          </span>
+          <div>
+            <p class="eyebrow">TYPING SPEED</p>
+            <h1>Session stats</h1>
+          </div>
+        </div>
+        <div class="live-status" id="live-status">
+          <span class="status-dot"></span>
+          <span id="status-label">Ready</span>
+        </div>
+      </header>
+
+      <section class="speed-card" aria-labelledby="current-speed-label">
+        <div class="speed-heading">
+          <span id="current-speed-label">Current speed</span>
+          <span class="live-tag"><span></span> LIVE</span>
+        </div>
+        <div class="speed-value">
+          <strong id="live-wpm">0</strong>
+          <span>WPM</span>
+        </div>
+        <div class="meter" role="progressbar" aria-label="Typing speed indicator" aria-valuemin="0" aria-valuemax="200" aria-valuenow="0">
+          <div class="meter-fill" id="meter-fill"></div>
+        </div>
+        <div class="meter-labels"><span>0</span><span>200+ WPM</span></div>
+      </section>
+
+      <section class="stats-grid" aria-label="Session statistics">
+        <article class="stat-card">
+          <span class="stat-label">Average</span>
+          <strong><span id="average-wpm">0</span><small>WPM</small></strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Peak</span>
+          <strong><span id="peak-wpm">0</span><small>WPM</small></strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Characters</span>
+          <strong id="total-characters">0</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Est. accuracy</span>
+          <strong><span id="accuracy">100</span><small>%</small></strong>
+        </article>
+      </section>
+
+      <div class="session-row">
+        <span>Session time</span>
+        <strong id="session-duration">0:00</strong>
+      </div>
+
+      <p class="notice" id="notice" role="status">Open this popup on a page and start typing in a text field.</p>
+
+      <footer class="footer">
+        <span>Only counts and timing are saved on this device.</span>
+        <button type="button" id="reset-button">Reset stats</button>
+      </footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

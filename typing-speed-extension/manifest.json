@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Typing Speed Tracker",
+  "version": "1.0.0",
+  "description": "See your live typing speed and session stats on the current page.",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Typing Speed Tracker",
+    "default_popup": "popup.html"
+  }
+}
